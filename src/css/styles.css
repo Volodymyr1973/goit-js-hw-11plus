@@ -17,6 +17,16 @@ body {
   --animation-duration: 250ms;
 }
 
+.container-search {
+  width: 100%;
+  height: 30px;
+  background-color: blue;
+}
+
+.search-form {
+  margin-left: 600px;
+}
+
 .gallery {
   display: flex;
 
@@ -30,6 +40,8 @@ body {
 
 .gallery__items {
   flex-basis: calc((100% - 36px) / 4);
+  text-decoration: none;
+  color: black;
 }
 
 .gallery__item {
@@ -58,6 +70,31 @@ body {
 
 .gallery__link:hover {
   cursor: zoom-in;
+}
+
+.info {
+  display: flex;
+}
+
+.info-item {
+  justify-content: space-between;
+  text-align: center;
+  border: 1px gray solid;
+  border-radius: 5px;
+}
+
+.load-more {
+  width: 150px;
+  background-color: blue;
+  color: #fafafa;
+  margin-left: 600px;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background-color: rgb(14, 29, 130);
 }
 
 .is-hidden.load-more {
