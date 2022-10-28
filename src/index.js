@@ -15,6 +15,7 @@ let allPhotos;
 
 function onSearchPhoto(event) {
   event.preventDefault();
+  loadMoreEl.classList.add('is-hidden');
   galleryEl.value = '';
   galleryEl.innerHTML = '';
   getPhoto();
@@ -40,11 +41,11 @@ async function getPhoto() {
         `Hooray! We found ${response.data.totalHits} images.`
       );
       renderPhoto();
-      loadMoreEl.classList.toggle('is-hidden');
+      // loadMoreEl.classList.toggle('is-hidden');
     } else if (response.data.total > 40) {
-      // Notiflix.Notify.success(
-      //   `Hooray! We found ${response.data.totalHits} images.`
-      // );
+      Notiflix.Notify.success(
+        `Hooray! We found ${response.data.totalHits} images.`
+      );
       renderPhoto();
       loadMoreEl.classList.remove('is-hidden');
     }
